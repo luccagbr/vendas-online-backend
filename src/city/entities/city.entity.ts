@@ -7,7 +7,7 @@ export class CityEntity {
     id: number;
 
     @Column({ name: 'state_id', nullable: false})
-    state_id: number;
+    stateid: number;
 
     @Column({ name: 'name', nullable: false})
     name: string;
