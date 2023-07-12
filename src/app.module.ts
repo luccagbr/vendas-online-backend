@@ -22,7 +22,9 @@ import { CityModule } from './city/city.module';
       migrations: [`${__dirname}/migration/{.ts,*.js}`],
       migrationsRun: true,
     }),
-    UserModule, StateModule, CityModule
+    UserModule,
+    StateModule,
+    CityModule,
   ],
   controllers: [],
   providers: [],
