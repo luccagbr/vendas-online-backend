@@ -1,19 +1,17 @@
 /* eslint-disable prettier/prettier */
-import { Module } from "@nestjs/common";
 import { CityController } from "./city.controller";
 import { CityService } from "./city.service";
 import { TypeOrmModule } from "@nestjs/typeorm";
 import { CityEntity } from "./entities/city.entity";
-import { CacheModule } from '@nestjs/cache-manager';
+import { CacheModule } from "src/cache/cache.module";
+import { Module } from "@nestjs/common";
 
 @Module({
     imports: [
         TypeOrmModule.forFeature([CityEntity]),
-        CacheModule.register({
-            ttl: 100000
-        })
+        CacheModule
     ],
     controllers: [CityController],
-    providers: [CityService]
+    providers: [CityService],
 })
 export class CityModule {};
